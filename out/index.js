@@ -17,7 +17,6 @@ const fs = require('fs');
     const url = 'https://en.wikipedia.org/wiki/Lists_of_airports';
     yield page.goto(url);
     let airport_list = [];
-    //airport_list.push({ 'one': '1', 'two': '2', 'three': '3' });
     const visitLink = (index = 3) => __awaiter(void 0, void 0, void 0, function* () {
         yield page.waitForXPath('//*[@id="mw-content-text"]/div[1]/p[4]/a');
         const links = yield page.$x('//*[@id="mw-content-text"]/div[1]/p[4]/a');
